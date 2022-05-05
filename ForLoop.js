@@ -15,12 +15,12 @@ console.log("\n---For Loop---");
 for (let i = 0; i < x.length; i++) {
   console.log("i:" + i, "x[i]:" + x[i]);
 }
-
+//For in:show index/key
 console.log("\n---For in---");
 for (let i in x) {
   console.log("i:" + i, "x[i]:" + x[i]);
 }
-
+//For of:show each element
 console.log("\n---For of---");
 for (let i of x) {
   console.log("i:" + i);

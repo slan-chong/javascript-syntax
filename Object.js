@@ -3,7 +3,7 @@ const obj = new Object();
 obj.number = 5;
 obj.boolean = true;
 console.log(obj);
-
+//Object 用for...in...
 for (let i in obj) {
   console.log(i, obj[i]);
 }
