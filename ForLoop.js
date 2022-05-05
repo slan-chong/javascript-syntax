@@ -39,7 +39,7 @@ console.log("\n---For Each---"); //forEach可修改原數值
 x.forEach((element) => {
   console.log(element);
 });
-console.log("\n---Map---");
+console.log("\n---Map---"); //JavaScript Maps(ES6推薦) 不會修改原數值
 x.map((element) => {
   console.log(element);
 });

@@ -17,8 +17,21 @@ myArray.push("THE END");
 console.log(myArray);
 
 //JavaScript Maps(ES6推薦)
-
 const list = [{ id: 512 }, { id: 1024 }, { id: "empty" }];
+//單獨處理,不會儲存/修改
 list.map((obj) => {
   console.log(obj.id * 2);
 });
+//放入新var
+let doubleList = list.map((obj) => {
+  return obj.id * 2;
+}); //要有return;除非一行
+console.log(doubleList);
+
+let arr = [5, 8, 3, 2, 8, 9, 5, 4, 6, 3, 2, 1, 0, 0, 1, 1, 3, 7];
+arr.sort((a, b) => a - b);
+let map = new Map();
+for (let num of arr) {
+  map.set(num, (map.get(num) || 0) + 1);
+}
+console.log(map);
