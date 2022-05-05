@@ -25,10 +25,6 @@ console.log("\n---For of---");
 for (let i of x) {
   console.log("i:" + i);
 }
-console.log("\n---For Each---");
-x.forEach((element) => {
-  console.log(element);
-});
 
 console.log("\n---While---");
 let y = 0;
@@ -36,6 +32,14 @@ while (y < x.length) {
   console.log("y:" + y, "x[y]:" + x[y]);
   y++;
 }
-
 //Confirm value of i
 console.log(i);
+
+console.log("\n---For Each---"); //forEach可修改原數值
+x.forEach((element) => {
+  console.log(element);
+});
+console.log("\n---Map---");
+x.map((element) => {
+  console.log(element);
+});
