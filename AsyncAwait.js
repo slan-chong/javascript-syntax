@@ -54,7 +54,7 @@ const Age = async (queryName) => {
     } else {
       console.log("今年未生日");
     }
-    console.log("Current Age:" + cAge + "\nVirtual Age" + vAge);
+    console.log(`Current Age:${cAge}\nVirtual Age:${vAge}`);
   } catch (e) {
     console.log(e);
   }
