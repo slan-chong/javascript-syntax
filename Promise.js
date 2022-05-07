@@ -43,13 +43,13 @@ const virtualAge = (birth) => {
     }, 1000);
   });
 };
-
-getData("PSY")
+let queryName = "PSY";
+getData(queryName)
   .then((user) => {
     return currentAge(user.birth);
   })
   .then((age) => {
-    console.log(age);
+    console.log("今年:" + age);
   })
   .catch((e) => {
     console.log(e);
