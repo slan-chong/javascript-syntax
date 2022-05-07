@@ -5,14 +5,21 @@ const userInfo = [
   { userName: "Elon Musk", birth: "1971-06-08" },
 ];
 
-const getBirth = (Name) => {
+const getData = (Name) => {
   for (let user of userInfo) {
     if (Name === user.userName) {
       return new Promise((resolve, reject) => {
-        resolve(user.birth);
+        setTimeout(() => {
+          resolve(user);
+        }, 1000);
       });
     }
   }
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(new Error("Not allowed to access data."));
+    });
+  });
 };
 const currentAge = (birth) => {
   const today = new Date();
@@ -22,13 +29,29 @@ const currentAge = (birth) => {
   if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
     age--;
   }
-  return age;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(age);
+    }, 1000);
+  });
 };
 const virtualAge = (birth) => {
   const today = new Date();
   const birthDate = new Date(birth);
-  return today.getFullYear() - birthDate.getFullYear();
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(today.getFullYear() - birthDate.getFullYear());
+    }, 1000);
+  });
 };
 
-console.log(getBirth("Elon Musk", currentAge));
-console.log(getBirth("Elon Musk", virtualAge));
+getData("Slan")
+  .then((user) => {
+    return currentAge(user.birth);
+  })
+  .then((age) => {
+    console.log(age);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
