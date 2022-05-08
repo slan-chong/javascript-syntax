@@ -1,8 +1,7 @@
 const getBirth = (Name, callback) => {
   const userInfo = [
-    { userName: "Alice", birth: "1999-12-04" },
-    { userName: "Slan", birth: "1999-12-20" },
-    { userName: "Foo", birth: "2020-12-21" },
+    { userName: "Foo", birth: "2000-1-1" },
+    { userName: "PSY", birth: "1977-12-31" },
     { userName: "Elon Musk", birth: "1971-06-08" },
   ];
   for (let user of userInfo) {

@@ -49,11 +49,7 @@ const Age = async (queryName) => {
     const userObj = await getData(queryName);
     const cAge = await currentAge(userObj.birth);
     const vAge = await virtualAge(userObj.birth);
-    if (cAge === vAge) {
-      console.log("今年已生日");
-    } else {
-      console.log("今年未生日");
-    }
+    cAge === vAge ? console.log("今年已生日") : console.log("今年未生日");
     console.log(`Current Age:${cAge}\nVirtual Age:${vAge}`);
   } catch (e) {
     console.log(e);
