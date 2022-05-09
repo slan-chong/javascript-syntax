@@ -35,11 +35,11 @@ while (y < x.length) {
 //Confirm value of i
 console.log(i);
 
-console.log("\n---For Each---"); //forEach可修改原數值
+console.log("\n---For Each---"); //forEach可修改原數值(修改原Array)
 x.forEach((element) => {
   console.log(element);
 });
-console.log("\n---Map---"); //JavaScript Maps(ES6推薦) 不會修改原數值
+console.log("\n---Map---"); //JavaScript Maps(ES6推薦) 不會修改原數值(return新Array)
 x.map((element) => {
   console.log(element);
 });

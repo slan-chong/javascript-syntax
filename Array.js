@@ -18,12 +18,11 @@ console.log(myArray);
 
 //JavaScript Maps(ES6推薦)
 const list = [{ id: 512 }, { id: 1024 }, { id: "empty" }];
-//單獨處理,不會儲存/修改
-list.map((obj) => {
-  console.log(obj.id * 2);
-});
-//放入新var
 let doubleList = list.map((obj) => {
   return obj.id * 2;
-}); //要有return;除非一行
+});
 console.log(doubleList);
+
+//console props
+const { ["log"]: c } = console;
+const con = console["log"];
