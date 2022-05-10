@@ -32,7 +32,7 @@ const myObj = {
 myObj["year"] = 1999; //修改or創造
 console.log(JSON.parse(JSON.stringify(myObj)));
 console.log(JSON.stringify(myObj));
-myObj.array.forEach((element) => {
+myObj.array.map((element) => {
   console.log(element);
 });
 myObj.sayHi("www");

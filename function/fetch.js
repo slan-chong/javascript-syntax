@@ -6,7 +6,7 @@ const getData = async () => {
   setLists(data);
 };
 const setLists = (data) => {
-  data.forEach((element) => {
+  data.map((element) => {
     console.log(element.title);
   });
 };
