@@ -36,3 +36,10 @@ myObj.array.map((element) => {
   console.log(element);
 });
 myObj.sayHi("www");
+//以下兩種差不多
+for (let i in myObj) {
+  console.log(i, myObj[i]);
+}
+Object.values(myObj).map((e) => {
+  console.log(e);
+});
